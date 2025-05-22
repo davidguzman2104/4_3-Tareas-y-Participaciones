@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre el Cuerpo Humano</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        .section img {
+            width: 50%; /* Ajusta el tamaño de las imágenes */
+            max-width: 300px; /* Tamaño máximo */
+            height: auto; /* Mantén la proporción */
+            display: block;
+            margin: 0 auto; /* Centra las imágenes */
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid black;
+            position: relative;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            display: none;
+        }
+        .card.revealed img {
+            display: block;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Descubre el Cuerpo Humano</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>Información sobre el Cuerpo Humano</h2>
+            <h3>El Corazón ❤️</h3>
+            <img src="corazon.jpg"" alt="Imagen del corazón">
+            <p>El corazón es como una bomba. Su trabajo es empujar la sangre por todo nuestro cuerpo para que pueda llevar oxígeno y nutrientes a todas las partes.</p>
+            
+            <h3>Los Pulmones 🌬️</h3>
+            <img src="pulmones.jpg" alt="Imagen de los pulmones">
+            <p>Los pulmones son como globos que inflamos cuando respiramos. Su trabajo es tomar oxígeno del aire y enviarlo a nuestra sangre, además de sacar el dióxido de carbono.</p>
+            
+            <h3>El Estómago 🍴</h3>
+            <img src="stomach.jpg" alt="Imagen del estómago">
+            <p>El estómago es un lugar especial donde nuestra comida se descompone en cosas más pequeñas que nuestro cuerpo usa como energía.</p>
+            
+            <h3>El Cerebro 🧠</h3>
+            <img src="cerebro.jpg" alt="Imagen del cerebro">
+            <p>El cerebro es como un jefe. Se asegura de que todo nuestro cuerpo funcione correctamente, nos ayuda a pensar, recordar, y controlar nuestros movimientos.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧠 Juego de Preguntas 🧠</h2>
+            <img id="questionImage" src="" alt="Imagen de la pregunta">
+            <p id="questionText"><b>Loading...</b></p>
+            <button id="option1" onclick="checkAnswer(this)"></button>
+            <button id="option2" onclick="checkAnswer(this)"></button>
+            <button id="option3" onclick="checkAnswer(this)"></button>
+            <p id="answerMessage"></p>
+        </div>
+
+        <div class="section">
+            <h2>🃏 Memorama del Cuerpo Humano 🃏</h2>
+            <p>Encuentra las parejas en este divertido juego.</p>
+            <div class="game-board" id="gameBoard"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Aprende Jugando</p>
+    </footer>
+
+    <script>
+        const questions = [
+            { question: "¿Qué órgano bombea la sangre?", correct: "Corazón", options: ["Corazón", "Pulmones", "Estómago"], image: "corazon.jpg" },
+            { question: "¿Qué sistema nos ayuda a respirar?", correct: "Sistema Respiratorio", options: ["Sistema Digestivo", "Sistema Nervioso", "Sistema Respiratorio"], image: "sistema respiratorio.jpg" },
+            { question: "¿Qué parte del cuerpo procesa los alimentos?", correct: "Estómago", options: ["Pulmones", "Cerebro", "Estómago"], image: "stomach.jpg" }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function loadQuestion() {
+            let q = questions[currentQuestionIndex];
+            document.getElementById("questionText").textContent = q.question;
+            document.getElementById("questionImage").src = q.image;
+            let options = shuffle(q.options);
+            document.getElementById("option1").textContent = options[0];
+            document.getElementById("option2").textContent = options[1];
+            document.getElementById("option3").textContent = options[2];
+            document.getElementById("answerMessage").textContent = "";
+        }
+
+        function checkAnswer(button) {
+            if (button.textContent === questions[currentQuestionIndex].correct) {
+                document.getElementById("answerMessage").textContent = "✅ ¡Correcto!";
+                currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+                setTimeout(loadQuestion, 1000);
+            } else {
+                document.getElementById("answerMessage").textContent = "❌ Intenta de nuevo";
+            }
+        }
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        loadQuestion();
+
+        const images = [
+            "cerebro.jpg",
+            "corazon humano.jpg",
+            "sistema respiratorio.jpg",
+            "estomago.jpg",
+        ];
+        let memoramaCards = images.concat(images);
+        memoramaCards = shuffle(memoramaCards);
+        let revealedCards = [];
+        let gameBoard = document.getElementById("gameBoard");
+
+        memoramaCards.forEach((img, index) => {
+            let card = document.createElement("div");
+            card.classList.add("card");
+            card.dataset.name = img;
+            let image = document.createElement("img");
+            image.src = img;
+            card.appendChild(image);
+            card.addEventListener("click", () => revealCard(card));
+            gameBoard.appendChild(card);
+        });
+
+        function revealCard(card) {
+            if (revealedCards.length < 2 && !card.classList.contains("revealed")) {
+                card.classList.add("revealed");
+                revealedCards.push(card);
+                if (revealedCards.length === 2) {
+                    setTimeout(checkMatch, 1000);
+                }
+            }
+        }
+
+        function checkMatch() {
+            if (revealedCards[0].dataset.name === revealedCards[1].dataset.name) {
+                revealedCards = [];
+            } else {
+                revealedCards.forEach(card => card.classList.remove("revealed"));
+                revealedCards = [];
+            }
+        }
+    </script>
+</body>
+</html>

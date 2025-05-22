@@ -1,0 +1,69 @@
+
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #e0f7fa;
+            color: #00796b;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+        .section img {
+            width: 50%; /* Ajusta el tamaño de las imágenes */
+            max-width: 300px; /* Tamaño máximo */
+            height: auto; /* Mantén la proporción */
+            display: block;
+            margin: 0 auto; /* Centra las imágenes */
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid black;
+            position: relative;
+        }
+        .card img {
+            width: 80px;
+            height: 80px;
+            display: none;
+        }
+        .card.revealed img {
+            display: block;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubriendo a los Seres Vivos</title>
+  <style>
+    /* Fondo de video */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .contenedor {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h1, h2 {
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    ul, p, table {
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #c8e6c9;
+    }
+
+    footer {
+      background-color: rgba(76, 175, 80, 0.8);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #2e7d32;
+    }
+
+    nav {
+      background-color: #3498DB;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Efecto máquina de escribir */
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #2e7d32;
+      display: inline-block;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #2e7d32; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Inicio</a></li>
+      <li><a href="temas.html">Temas</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="video-fondo">
+    <source src="imagenes/2.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <!-- Encabezado con efecto máquina de escribir -->
+  <div class="contenedor">
+    <h1 id="titulo" class="typewriter"></h1>
+    <p>¡Explora el mundo natural y aprende cómo funciona la vida!</p>
+  </div>
+
+  <!-- Contenido -->
+  <div class="contenedor">
+    <h2>🌍 Introducción</h2>
+     <p>En la Tierra viven millones de seres maravillosos: desde los más pequeños como las bacterias, hasta los más grandes como las ballenas. Todos ellos tienen algo en común: ¡están vivos!</p>
+    <p>En esta página aprenderás qué son los seres vivos, cómo se clasifican, cuáles son sus características y qué diferencias existen entre animales y plantas. ¡Es hora de observar, descubrir y aprender juntos!</p>
+  </div>
+
+  <div class="contenedor">
+    <h2>🔎 ¿Qué son los seres vivos?</h2>
+     <p>Son aquellos que nacen, crecen, se alimentan, se reproducen, responden a su entorno y mueren. Ejemplos: personas, animales, plantas, bacterias y hongos.</p>
+  </div>
+
+  <div class="contenedor">
+    <h2>🌟 Características de los seres vivos</h2>
+    <table>
+      <tr><th>Característica</th><th>¿Qué significa?</th><th>Ejemplo</th></tr>
+      <tr><td>Nacen</td><td>Comienzan su vida</td><td>Un cachorro nace</td></tr>
+      <tr><td>Crecen</td><td>Cambian de tamaño y forma</td><td>Una semilla se convierte en árbol</td></tr>
+      <tr><td>Se alimentan</td><td>Obtienen energía para vivir</td><td>Los humanos comen comida</td></tr>
+      <tr><td>Se reproducen</td><td>Forman nuevos seres vivos</td><td>Los peces ponen huevos</td></tr>
+      <tr><td>Responden a estímulos</td><td>Reaccionan a lo que ocurre</td><td>Las plantas giran hacia el sol</td></tr>
+      <tr><td>Mueren</td><td>Terminan su vida</td><td>Las hojas caen en otoño</td></tr>
+    </table>
+  </div>
+
+  <div class="contenedor">
+    <h2>📚 Clasificación de los seres vivos</h2>
+    <ul>
+      <li>🐾 Animales</li>
+      <li>🌱 Plantas</li>
+      <li>🍄 Hongos</li>
+      <li>🦠 Bacterias</li>
+      <li>🔬 Protistas</li>
+    </ul>
+  </div>
+
+  <div class="contenedor">
+    <h2>🦁 Animales vertebrados e invertebrados</h2>
+    <p><strong>Vertebrados:</strong> Tienen columna vertebral (Ej.: perro, pez, ave).</p>
+    <p><strong>Invertebrados:</strong> No tienen huesos (Ej.: insecto, medusa, pulpo).</p>
+    <table>
+      <tr><th>Tipo</th><th>¿Tiene huesos?</th><th>Ejemplo</th></tr>
+      <tr><td>Vertebrado</td><td>Sí</td><td>León, pez</td></tr>
+      <tr><td>Invertebrado</td><td>No</td><td>Mariposa, gusano</td></tr>
+    </table>
+  </div>
+
+  <div class="contenedor">
+    <h2>🌿 Plantas</h2>
+    <p>Las plantas son seres vivos que crecen en la tierra. Hacen su comida con la luz del sol (fotosíntesis), no se mueven, pero también nacen, crecen y se reproducen. Hay muchas clases: árboles, flores, pasto, helechos, cactus y más.</p>
+  </div>
+
+  <!-- Conclusión -->
+  <div class="contenedor">
+    <h2>✅ Conclusión</h2>
+    <p>Los seres vivos están en todas partes. Cada uno cumple una función especial en la naturaleza. Conocerlos es el primer paso para cuidarlos y respetarlos. ¡Sigue explorando!</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Mundo Natural - Página educativa para niños.</p>
+  </footer>
+
+  <!-- Script para efecto máquina de escribir -->
+  <script>
+    const texto = "Descubriendo a los Seres Vivos";
+    let i = 0;
+    const velocidad = 80; // velocidad en milisegundos
+    const titulo = document.getElementById("titulo");
+
+    function escribir() {
+      if (i < texto.length) {
+        titulo.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(escribir, velocidad);
+      }
+    }
+
+    window.onload = escribir;
+  </script>
+</body>
+</html>

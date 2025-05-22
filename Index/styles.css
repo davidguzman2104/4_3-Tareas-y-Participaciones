@@ -1,0 +1,214 @@
+/* Aplicación del estilo general al body */
+body {
+    min-height: 100vh; /* Ocupa al menos el 100% del viewport */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente amigable y divertida */
+    margin: 0; /* Elimina los márgenes por defecto */
+    display: flex;
+    flex-direction: column;
+    background-color: #fff8dc; /* Color de fondo crema claro (estilo infantil) */
+    color: #333; /* Texto en gris oscuro para buena legibilidad */
+}
+
+/* Este contenedor se expande para empujar el footer hacia abajo */
+.contenedor-principal {
+    flex: 1;
+    padding: 2em; /* Ajusta según necesites */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+/* Estilo para el encabezado */
+header {
+    background-color: #4CAF50; /* Fondo verde para el encabezado */
+    color: white; /* Texto blanco sobre el fondo verde */
+    text-align: center; /* Centra el texto del encabezado */
+    padding: 1em 0; /* Espaciado interior (solo vertical) */
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Se coloca en la parte superior de la página */
+    left: 0; /* Asegura que comience desde el borde izquierdo */
+    right: 0; /* Asegura que llegue hasta el borde derecho */
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la página */
+    z-index: 1000; /* Asegura que el encabezado esté encima de otros elementos */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    margin: 0; /* Elimina cualquier margen */
+}
+
+/* Estilo para los logos dentro del header */
+.logo {
+    position: absolute; /* Posicionamiento absoluto para colocar los logos */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
+    height: 150px; /* Aumenta la altura de los logos */
+    width: auto; /* Mantiene la proporción */
+}
+
+.logo.derecho {
+    right: 30px; /* Logo derecho se alinea al borde derecho con más espacio */
+}
+
+.logo:not(.derecho) {
+    left: 30px; /* Logo izquierdo se alinea al borde izquierdo con más espacio */
+}
+
+/* Estilo para el subtítulo */
+.subtitulo {
+    font-style: italic; /* El subtítulo en cursiva */
+    margin-top: 5px; /* Margen superior para separación del título */
+}
+/* Estilo general para el contenedor principal */
+main {
+    display: flex; /* Usa Flexbox para distribuir contenido horizontalmente */
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Alinea los elementos al centro de la columna */
+    padding: 4em; /* Espaciado interno */
+    gap: 40px; /* Espacio entre los elementos */
+    padding-top: 120px; /* Ajusta el padding superior para que el contenido no quede oculto por el header fijo */
+}
+
+/* Estilo para el contenedor de los botones de cursos */
+.contenedor-cursos {
+    display: grid; /* Usa CSS Grid para distribuir los botones */
+    grid-template-columns: repeat(3, 300px); /* 3 columnas de 180px de ancho */
+    gap: 30px; /* Espacio entre botones */
+    margin-top: 10px; /* Espaciado superior del contenedor */
+}
+
+/* Estilo para los botones de los cursos */
+.boton-curso {
+    background-color: gold; /* Fondo amarillo oro para destacar los botones */
+    border: none; /* Sin bordes */
+    padding: 15px; /* Espaciado interno */
+    font-weight: bold; /* Texto en negritas */
+    font-size: 1em; /* Tamaño de fuente base */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia a cursor de mano al pasar el mouse */
+    text-align: center; /* Texto centrado dentro del botón */
+    text-decoration: none; /* Sin subrayado (para <a>) */
+    color: black; /* Texto en color negro */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto hover para los botones */
+.boton-curso:hover {
+    background-color: #ffa500; /* Cambia a naranja cuando pasas el mouse */
+    transform: scale(1.05); /* Efecto de escala (aumenta tamaño ligeramente) */
+}
+
+/* Estilo para el pizarrón de matemáticas */
+.pizarron-matematicas {
+    background-color: #2c3e50; /* Color de pizarrón */
+    border: 10px solid #8B4513; /* Marco de madera */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Relleno alrededor del contenido */
+    max-width: 500px; /* Ancho máximo */
+    margin: 20px auto; /* Márgenes automáticos para centrar el pizarrón */
+    text-align: center; /* Centra el texto dentro del pizarrón */
+    font-family: 'Comic Sans MS', cursive; /* Fuente amigable para niños */
+    color: white; /* Texto blanco */
+}
+
+/* Estilo para las operaciones matemáticas dentro del pizarrón */
+.operacion {
+    font-size: 2.5em; /* Tamaño grande para las operaciones */
+    margin: 20px 0; /* Espaciado vertical */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mayor visibilidad */
+}
+
+/* Estilo para los campos de entrada de respuesta */
+input {
+    padding: 10px; /* Relleno dentro del input */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    margin: 10px; /* Espaciado alrededor del input */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #4CAF50; /* Fondo verde brillante */
+    color: white; /* Texto blanco */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 10px 15px; /* Relleno dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 1em; /* Tamaño de fuente estándar */
+    margin: 5px; /* Espaciado entre botones */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #45a049; /* Fondo verde más oscuro cuando se pasa el mouse */
+}
+
+/* Estilo para mostrar el resultado */
+#resultado {
+    font-size: 1.5em; /* Tamaño grande para mostrar el resultado */
+    font-weight: bold; /* Negrita para resaltar el resultado */
+    min-height: 30px; /* Altura mínima para el área del resultado */
+}
+
+/* Estilo para el avatar de Toni */
+.toni-lateral {
+    text-align: center; /* Centra el contenido dentro del contenedor de Toni */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilo para la imagen del avatar de Toni */
+.toni-lateral img {
+    height: 300px; /* Altura fija del avatar de Toni */
+    margin-bottom: 10px; /* Espaciado debajo de la imagen */
+    transition: transform 0.5s; /* Transición suave para efectos */
+}
+
+/* Nuevo contenedor que organiza el avatar y el pizarrón */
+.contenedor-avatar-pizarro {
+    display: flex; /* Usa flexbox para alinear el avatar y el pizarrón horizontalmente */
+    justify-content: center; /* Centra el contenido en el contenedor */
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 100px; /* Espacio entre el avatar y el pizarrón */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilo para el avatar en el contenedor */
+.toni-lateral {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.avatar-con-letrero {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-con-letrero img {
+    display: block; /* Quita el espacio blanco abajo de la imagen */
+    width: 300px;   /* O el tamaño que necesites */
+}
+
+#bienvenido {
+    font-size: 1.1em;
+    color: green;
+    animation: parpadeo 2s infinite;
+    position: absolute;
+    top: -10px;     /* Más cerca del borde superior */
+    right: -10px;   /* Pegado al borde derecho */
+    background: #fff;
+    border: 2px solid green;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-weight: bold;
+    z-index: 10; /* Asegura que esté encima */
+}
+
+/* Animación para parpadeo */
+@keyframes parpadeo {
+    0% { opacity: 1; }     /* Totalmente visible */
+    50% { opacity: 0; }    /* Invisible a la mitad del tiempo */
+    100% { opacity: 1; }   /* Visible de nuevo al final del ciclo */
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Escuelita de Male</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+  <header>
+    <img src="images/logo2.png" alt="TecNM" class="logo">
+    <h1>Aprende en línea en la escuelita de Male</h1>
+    <p class="subtitulo">¡Aprender es una aventura en La Escuelita de Male!</p>
+    <img src="images/logo1.png" alt="Logo Derecho" class="logo derecho">
+  </header>
+
+  <main>
+    <div class="contenedor-cursos">
+        <!-- Botones de los cursos -->
+        <a href="espanol.html" class="boton-curso">Español</a>
+        <a href="matematicas.html" class="boton-curso">Matemáticas</a>
+        <a href="ciencias.html" class="boton-curso">Ciencias Naturales</a>
+        <a href="historia.html" class="boton-curso">Historia</a>
+        <a href="geografia.html" class="boton-curso">Geografía</a>
+        <a href="informatica.html" class="boton-curso">Informática</a>
+    </div>
+
+    <!-- Contenedor para el avatar y el pizarrón -->
+    <div class="contenedor-avatar-pizarro">
+        <div class="toni-lateral">
+          <div class="avatar-con-letrero">
+            <img src="images/toni2.png" alt="Toni la mascota">
+            <p id="bienvenido"><strong>Soy Toni</strong><br>Bienvenido</p>
+        </div>
+      </div>
+        <div class="pizarron-matematicas">
+            <h2>✏️ Pizarrón de Operaciones ✏️</h2>
+            <div class="operacion" id="operacion"></div>
+            <input type="text" id="respuesta" placeholder="Escribe tu respuesta...">
+            <button onclick="verificarRespuesta()">Comprobar</button>
+            <p id="resultado"></p>
+            <button onclick="nuevaOperacion()">Nueva operación</button>
+        </div>
+    </div>
+</main>
+</div>
+
+  <footer>
+    Tecnológico Nacional de México - Campus Pachuca - Proyecto de asignatura - Programación Web - (c) 2025
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

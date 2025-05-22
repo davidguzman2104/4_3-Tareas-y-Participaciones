@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Cuidemos Nuestro Entorno!</title>
+
+  <!-- Enlace al archivo de estilos CSS -->
+  <link rel="stylesheet" href="entornostyles.css" />
+</head>
+<body>
+
+  <!-- Imagen de encabezado -->
+  <img src="imagenes/naturaleza.jpg" alt="Naturaleza" class="banner">
+
+  <h1>🌍 ¡Cuidemos Nuestro Entorno! 🌿</h1>
+
+  <div class="consejos">
+    <h2>🌱 Consejos para ayudar al planeta:</h2>
+    <ul>
+      <li><img src="imagenes/bombilla.png" alt="Apagar luz" width="20"> Apaga la luz cuando no la necesites.</li>
+      <li><img src="imagenes/basura.png" alt="Basura" width="20"> No tires basura al suelo.</li>
+      <li><img src="imagenes/papel.png" alt="Papel" width="20"> Usa ambos lados del papel.</li>
+      <li><img src="imagenes/arbol.jpg" alt="Planta" width="20"> Riega las plantas sin desperdiciar agua.</li>
+      <li><img src="Ninos-reciclando-dia-medioambiente.jpg" alt="Reciclaje" width="20"> Recicla papel, plástico y vidrio.</li>
+    </ul>
+  </div>
+
+  <div class="juego">
+    <h2>🎮 Juego: ¿Qué es lo mejor para el planeta?</h2>
+    <p>¿Qué debes hacer con una botella de plástico vacía?</p>
+    <img src="imagenes/botella-plastico.png" alt="Botella de plástico" width="100" class="pregunta-img">
+    
+    <div class="botones">
+      <button onclick="verificarRespuesta('a')">
+        <img src="imagenes/tirar.png" alt="Tirar" width="40"><br>A. Tirarla al suelo
+      </button>
+      <button onclick="verificarRespuesta('b')">
+        <img src="imagenes/reciclado.png" alt="Reciclar" width="40"><br>B. Reciclarla
+      </button>
+      <button onclick="verificarRespuesta('c')">
+        <img src="imagenes/mochila.png" alt="Mochila" width="40"><br>C. Guardarla para siempre
+      </button>
+    </div>
+
+    <div class="respuesta" id="respuesta"></div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript -->
+  <script src="entorno.js"></script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,95 @@
+/* Colores base */
+:root {
+  --verde: #2e7d32;
+  --verde-claro: #a5d6a7;
+  --azul-claro: #e0f7fa;
+  --blanco: #ffffff;
+  --gris: #f0f0f0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--azul-claro);
+  color: var(--verde);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+  color: var(--verde);
+}
+
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.consejos, .juego {
+  background-color: var(--blanco);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.juego p {
+  font-weight: bold;
+}
+
+.pregunta-img {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 180px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--verde);
+  color: white;
+}
+
+button img {
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.respuesta {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+}

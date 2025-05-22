@@ -1,0 +1,297 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Propiedades de la Materia</title>
+  <meta name="description" content="Descripción detallada de las propiedades de la materia, sus estados, ejemplos y aplicaciones." />
+  <style>
+    /* Reset básico */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: rgb(0, 0, 0);
+     
+    }
+
+    header {
+      background: #2d18a5;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+   .video-background {
+  position: fixed;
+  right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  background-color: black; /* Solo para prueba */
+}
+
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Navegación */
+    .navbar {
+      background-color: #003366;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar a:focus,
+    .navbar a:hover {
+      background-color: #ffcc00;
+      color: #003366;
+      outline: none;
+    }
+
+    /* Layout principal dividido */
+    .main-layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto 3rem;
+      gap: 2rem;
+      padding: 0 20px;
+    }
+
+    /* Contenedor contenido alineado a la izquierda */
+    main.container {
+      flex: 1 1 60%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    /* Contenedor para imágenes a la derecha */
+    aside.images-panel {
+      flex: 1 1 35%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    aside.images-panel img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: 180px;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+
+    /* Listas con mejor padding */
+    section ul {
+      padding-left: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    /* Tabla */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 1rem;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    table thead {
+      background-color: #003366;
+      color: white;
+    }
+
+    /* Secciones tipo tarjeta */
+    .card-section {
+      background-color: #eaf3fb;
+      padding: 1rem 1.25rem;
+      border-left: 6px solid #007acc;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.07);
+    }
+
+    /* Emoji estilo */
+    .emoji {
+      font-size: 1.8rem;
+      margin-right: 0.3rem;
+      vertical-align: middle;
+    }
+
+    /* Responsive para móviles */
+    @media (max-width: 900px) {
+      .main-layout {
+        flex-direction: column;
+      }
+      main.container, aside.images-panel {
+        max-height: none;
+        flex: none;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      aside.images-panel img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Partículas de fondo -->
+  <video autoplay muted loop class="video-background">
+    <source src="imagenes/watermarked_preview.mp4" type="video/mp4" />
+  </video>
+
+  <nav class="navbar" role="navigation" aria-label="Menú principal">
+    <ul>
+      <li><a href="index.html">Página Principal</a></li>
+      <li><a href="Estados de la Materia.html">Estados de la Materia</a></li>
+      <li><a href="Propiedades de la Materia.html">Propiedades de la Materia</a></li>
+      <li><a href="Cambios-Fisicos-Quimicos.html">Cambios Físicos y Químicos</a></li>
+      <li><a href="Reacciones-Quimicas.html">Reacciones Químicas</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+    </ul>
+  </nav>
+
+  <header>🌟 Propiedades de la Materia</header>
+
+  <div class="main-layout">
+    <main class="container" role="main">
+      <h1><span class="emoji" aria-hidden="true">🧬</span>Propiedades de la Materia</h1>
+
+      <article class="card-section" aria-labelledby="estructura-materia">
+        <h2 id="estructura-materia">🔹 Estructura de la materia</h2>
+        <p>La materia está formada por átomos, compuestos por:</p>
+        <ul>
+          <li><strong>Electrones:</strong> carga negativa</li>
+          <li><strong>Protones:</strong> carga positiva</li>
+          <li><strong>Neutrones:</strong> sin carga</li>
+        </ul>
+        <p>Los átomos pueden formar <strong>moléculas</strong>, la base de muchas sustancias.</p>
+      </article>
+
+      <article class="card-section" aria-labelledby="clasificacion-materia">
+        <h2 id="clasificacion-materia">⚛️ Clasificación de la materia</h2>
+        <h3>1. Sustancias puras</h3>
+        <ul>
+          <li><strong>Elementos:</strong> un solo tipo de átomo (ej. oxígeno, hierro)</li>
+          <li><strong>Compuestos:</strong> varios átomos unidos químicamente (ej. agua, sal)</li>
+        </ul>
+        <h3>2. Mezclas</h3>
+        <ul>
+          <li><strong>Homogéneas:</strong> aspecto uniforme (ej. aire, agua con sal)</li>
+          <li><strong>Heterogéneas:</strong> componentes distinguibles (ej. ensalada, granito)</li>
+        </ul>
+      </article>
+
+      <article class="card-section" aria-labelledby="propiedades-intensivas-extensivas">
+        <h2 id="propiedades-intensivas-extensivas">🔸 Propiedades intensivas y extensivas</h2>
+        <p><strong>Intensivas:</strong> no dependen de la cantidad de materia (color, temperatura).</p>
+        <p><strong>Extensivas:</strong> dependen de la cantidad (masa, volumen).</p>
+      </article>
+
+      <article class="card-section" aria-labelledby="propiedades-fisicas-quimicas">
+        <h2 id="propiedades-fisicas-quimicas">🔹 Propiedades físicas y químicas</h2>
+        <ul>
+          <li><strong>Físicas:</strong> observables sin cambiar la composición (color, punto de fusión)</li>
+          <li><strong>Químicas:</strong> relacionadas con cambios y reacciones (oxidación, inflamabilidad)</li>
+        </ul>
+      </article>
+
+      <article class="card-section" aria-labelledby="ejemplos-propiedades">
+        <h2 id="ejemplos-propiedades">💡 Ejemplos de propiedades</h2>
+        <ul>
+          <li>Color</li>
+          <li>Olor</li>
+          <li>Densidad</li>
+          <li>Conductividad eléctrica</li>
+          <li>Maleabilidad</li>
+          <li>Punto de ebullición</li>
+          <li>Inflamabilidad</li>
+        </ul>
+      </article>
+    </main>
+
+    <aside class="images-panel" aria-label="Imágenes relacionadas con la materia">
+      <img src="imagenes/estructura.jpg" alt="Estructura atómica de la materia" />
+      <img src="imagenes/clasificacion.jpg" alt="Clasificación de la materia" />
+      <img src="imagenes/propiedades.jpg" alt="Propiedades físicas y químicas" />
+    </aside>
+  </div>
+
+  <!-- Scripts si los tienes -->
+</body>
+</html>

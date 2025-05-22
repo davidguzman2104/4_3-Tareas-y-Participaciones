@@ -1,0 +1,260 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Menú de Navegación */
+.navbar {
+    background-color: #003366;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background-color: #ffcc00;
+    color: #003366;
+    outline: none;
+}
+
+/* Secciones */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+
+.introduccion {
+    background-color: #e9f0fb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    box-shadow: 0 2px 6px rgba(44,62,80,0.1);
+}
+
+/* Estilos de Juegos */
+.juego {
+    background-color: white;
+    padding: 25px 20px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.juego h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.juego p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Drag and Drop */
+.drag-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.opciones p {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 15px;
+    cursor: grab;
+    border-radius: 6px;
+    user-select: none;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(52,152,219,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.opciones p:active {
+    cursor: grabbing;
+    background-color: #2980b9;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    gap: 20px;
+}
+
+.dropzone {
+    flex: 1;
+    height: 60px;
+    border: 3px dashed #2980b9;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2980b9;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dropzone.dragover {
+    background-color: #d6eaff;
+    border-color: #1c5980;
+}
+
+/* Memoria */
+.memoria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta:hover {
+    background-color: #2980b9;
+}
+.juego:nth-of-type(1) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.juego:nth-of-type(1) h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+}
+
+.juego:nth-of-type(1) p#pista {
+    font-size: 1.25rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    font-style: italic;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+    user-select: none;
+}
+
+.juego:nth-of-type(1) input#respuesta {
+    width: 70%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.juego:nth-of-type(1) input#respuesta:focus {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.juego:nth-of-type(1) button {
+    background: #ffcc00;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 0 10px;
+    box-shadow: 0 5px 12px rgba(255, 204, 0, 0.5);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.juego:nth-of-type(1) button:hover {
+    background-color: #e6b800;
+    color: #1a2733;
+    box-shadow: 0 7px 15px rgba(230, 184, 0, 0.7);
+}
+
+.juego:nth-of-type(1) #resultado {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    min-height: 1.5em;
+    transition: color 0.4s ease;
+}
+
+   .video-background {
+  position: fixed;
+  right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  background-color: black; /* Solo para prueba */
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambios Físicos y Químicos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #2e1891);
+      color: #333;
+    }
+
+    header {
+      background: #6a1b9a;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #1976d2;
+      margin-top: 0;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .comparison {
+      background: #fff3e0;
+      padding: 30px;
+      margin: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .comparison table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+    .comparison th, .comparison td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .comparison th {
+      background: #ffcc80;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      background: #f3e5f5;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .comparison {
+        margin: 20px;
+      }
+    }
+       .navbar {
+      background-color: #003366;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar a:focus,
+    .navbar a:hover {
+      background-color: #ffcc00;
+      color: #003366;
+      outline: none;
+    }
+    #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+  </style>
+</head>
+<body>
+     
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Página Principal</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Estados de la Materia.html">Estados de la Materia</a></li>
+      <li><a href="propiedades de la materia.html">Propiedades de la Materia</a></li>
+      <li><a href="cambios-fisicos-quimicos.html">Cambios Físicos y Químicos</a></li>
+      <li><a href="reacciones-quimicas.html">Reacciones Químicas</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+    </ul>
+  </nav>
+<header>🌟 Cambios Físicos y Cambios Químicos</header>
+<div id="particles-js"></div>
+<section class="section">
+  <div class="card">
+    <h2>🔍 ¿Qué es un cambio físico?</h2>
+    <p>Un cambio físico es cuando la materia cambia su forma o estado (sólido, líquido o gas), pero sigue siendo la misma sustancia.</p>
+    <p><strong>👉 Ejemplo:</strong> Cuando el hielo se derrite y se convierte en agua. Sigue siendo agua, solo cambia de sólido a líquido.</p>
+    
+    <h3>✅ Características:</h3>
+    <ul>
+      <li>No cambia la sustancia.</li>
+      <li>Puede regresar a su estado original.</li>
+      <li>No se forma nada nuevo.</li>
+    </ul>
+
+    <h3>🎨 Otros ejemplos:</h3>
+    <ul>
+      <li>Cortar papel ✂️</li>
+      <li>Hervir agua 💧🔥</li>
+      <li>Romper un vaso 💥</li>
+      <li>Inflar un globo 🎈</li>
+    </ul>
+  </div>
+
+  <div class="image-grid">
+    <img src="hielo.jpg" alt="Hielo derritiéndose">
+    <img src="papel-cortado.jpg" alt="Papel cortado">
+    <img src="hervir-agua.jpg" alt="Agua hirviendo">
+    <img src="vaso-roto.jpg" alt="Vaso roto">
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>💥 ¿Qué es un cambio químico?</h2>
+    <p>Un cambio químico ocurre cuando una o más sustancias se transforman en otras diferentes.</p>
+    <p><strong>👉 Ejemplo:</strong> Cuando quemamos papel, se convierte en ceniza. ¡Ya no podemos volver a tener el mismo papel!</p>
+    
+    <h3>✅ Características:</h3>
+    <ul>
+      <li>Se forma una nueva sustancia.</li>
+      <li>No se puede volver atrás fácilmente.</li>
+      <li>A menudo cambia el color, la temperatura o aparece gas o burbujas.</li>
+    </ul>
+
+    <h3>🧪 Otros ejemplos:</h3>
+    <ul>
+      <li>Oxidación del hierro 🧲</li>
+      <li>Cocinar un huevo 🍳</li>
+      <li>Fermentar la leche 🥛→🍶</li>
+      <li>Cocinar un pastel 🎂</li>
+    </ul>
+  </div>
+
+  <div class="image-grid">
+    <img src="quemar-papel.jpg" alt="Papel quemado">
+    <img src="oxidacion.jpg" alt="Hierro oxidado">
+    <img src="huevo.jpg" alt="Huevo cocinado">
+    <img src="fermentacion.jpg" alt="Leche fermentada">
+  </div>
+</section>
+
+<section class="comparison">
+  <h2>🤔 ¿Cómo saber si es físico o químico?</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>🔍 Situación</th>
+        <th>💡 Tipo de cambio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>El hielo se derrite ❄️➡️💧</td>
+        <td><strong>Cambio físico</strong></td>
+      </tr>
+      <tr>
+        <td>Se quema una hoja de papel 🔥</td>
+        <td><strong>Cambio químico</strong></td>
+      </tr>
+      <tr>
+        <td>Inflamos un globo 🎈</td>
+        <td><strong>Cambio físico</strong></td>
+      </tr>
+      <tr>
+        <td>Cocinamos un pastel 🎂</td>
+        <td><strong>Cambio químico</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="footer-note">
+  🧠 <strong>¡Recuerda!</strong> Si solo cambia la forma o el estado, es un cambio físico.<br>
+  Si se crea algo nuevo, es un cambio químico.
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- Configuración de partículas -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: { enable: true, speed: 2 }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</html>

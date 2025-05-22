@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estados de la Materia</title>
+  <link rel="stylesheet" href="css/stlyes.css" />
+  <style>
+    /* Estilos para la nueva sección de imágenes */
+    .imagenes-estado {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .imagenes-estado h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #333;
+      font-weight: 700;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .galeria-item {
+      flex: 1 1 180px;
+      max-width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background: #fff;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+    .galeria-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .galeria-item img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .galeria-item p {
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #444;
+    }
+    @media (max-width: 480px) {
+      .galeria-item {
+        max-width: 100%;
+      }
+    }
+       .video-background {
+  position: fixed;
+  right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  background-color: black; /* Solo para prueba */
+}
+  </style>
+</head>
+<body>
+   <video autoplay muted loop class="video-background">
+    <source src="imagenes/video_preview_h264 (1).mp4" type="video/mp4" />
+  </video>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Página Principal</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Estados de la Materia.html">Estados de la Materia</a></li>
+      <li><a href="propiedades de la materia.html">Propiedades de la Materia</a></li>
+      <li><a href="cambios-fisicos-quimicos.html">Cambios Físicos y Químicos</a></li>
+      <li><a href="reacciones-quimicas.html">Reacciones Químicas</a></li>
+      <li><a href="juegos.html">Juegos</a></li>
+    </ul>
+  </nav>
+  <section class="container">
+    <h1>🔬 Estados de la Materia</h1>
+    <p class="intro">
+      La materia puede presentarse en distintos estados físicos según la temperatura y presión. A continuación se describen los principales:
+    </p>
+
+    <div class="cards">
+      <!-- aquí van tus cards de estados -->
+      <div class="card">
+        <h2>🧊 Sólido</h2>
+        <ul>
+          <li>Forma y volumen definidos</li>
+          <li>Partículas ordenadas y muy juntas</li>
+          <li>Movimiento vibratorio</li>
+          <li><strong>Ejemplo:</strong> Hielo, metal</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>💧 Líquido</h2>
+        <ul>
+          <li>Volumen definido, forma variable</li>
+          <li>Partículas cercanas pero móviles</li>
+          <li>Fluye fácilmente</li>
+          <li><strong>Ejemplo:</strong> Agua, aceite</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🌬️ Gaseoso</h2>
+        <ul>
+          <li>No tiene forma ni volumen definidos</li>
+          <li>Partículas muy separadas</li>
+          <li>Se expanden libremente</li>
+          <li><strong>Ejemplo:</strong> Aire, vapor</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>⚡ Plasma</h2>
+        <ul>
+          <li>Gas ionizado (con carga eléctrica)</li>
+          <li>Alta energía</li>
+          <li>Conduce electricidad</li>
+          <li><strong>Ejemplo:</strong> Sol, rayos, neón</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🧪 Bose-Einstein</h2>
+        <ul>
+          <li>Temperaturas cercanas al cero absoluto</li>
+          <li>Comportamiento cuántico</li>
+          <li>Partículas actúan como una sola</li>
+          <li><strong>Ejemplo:</strong> Átomos de rubidio</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NUEVA SECCIÓN DE IMÁGENES -->
+    <section class="imagenes-estado">
+      <h2>🖼️ Imágenes por Estado de la Materia</h2>
+      <div class="galeria">
+        <div class="galeria-item">
+          <img src="imagenes/solido.jpg" alt="Sólido - Hielo" />
+          <p>Sólido (Hielo)</p>
+        </div>
+        <div class="galeria-item">
+          <img src="imagenes/liquido.jpg" alt="Líquido - Agua" />
+          <p>Líquido (Agua)</p>
+        </div>
+        <div class="galeria-item">
+          <img src="imagenes/gaseoso.jpg" alt="Gaseoso - Vapor" />
+          <p>Gaseoso (Vapor)</p>
+        </div>
+        <div class="galeria-item">
+          <img src="imagenes/plasma.jpg" alt="Plasma - Lámpara de neón" />
+          <p>Plasma (Lámpara de neón)</p>
+        </div>
+        <div class="galeria-item">
+          <img src="imagenes/bose-einstein.jpg" alt="Bose-Einstein Condensado" />
+          <p>Bose-Einstein</p>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="subtitle">🔄 Cambios de Estado</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Cambio</th>
+          <th>De → A</th>
+          <th>Ejemplo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fusión</td>
+          <td>Sólido → Líquido</td>
+          <td>Hielo derritiéndose</td>
+        </tr>
+        <tr>
+          <td>Solidificación</td>
+          <td>Líquido → Sólido</td>
+          <td>Agua congelándose</td>
+        </tr>
+        <tr>
+          <td>Vaporización</td>
+          <td>Líquido → Gas</td>
+          <td>Agua hirviendo</td>
+        </tr>
+        <tr>
+          <td>Condensación</td>
+          <td>Gas → Líquido</td>
+          <td>Vapor que se enfría</td>
+        </tr>
+        <tr>
+          <td>Sublimación</td>
+          <td>Sólido → Gas</td>
+          <td>Hielo seco</td>
+        </tr>
+        <tr>
+          <td>Deposición</td>
+          <td>Gas → Sólido</td>
+          <td>Nieve desde vapor</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
